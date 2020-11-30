@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'nested_scaffold'
 gem 'rest-client'
 # TO HIDE API
-
+gem 'figaro'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'tinymce-rails'
