@@ -1,25 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App was budild with Ruby on Rails 
 
-Things you may want to cover:
+To hide API KEY used:
+gem 'figaro'
 
-* Ruby version
+other gems:
+gem 'tinymce-rails'
 
-* System dependencies
+# Stories are nested within Newsletter by date
+# one can CRUD Stories 
+# one can CRUD Newsletters 
 
-* Configuration
+# to create stories and newsletters I used TinyMCE
 
-* Database creation
+* bundle install
 
-* Database initialization
+* npm install /npm update
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # MB-project
