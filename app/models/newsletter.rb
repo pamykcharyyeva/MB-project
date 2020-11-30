@@ -10,10 +10,12 @@ class Newsletter < ApplicationRecord
 
   def publish
     uri = URI.parse("https://lyra-api.herokuapp.com/api/newsletters")
-
+# not sure how to show to add hiden api here from env/.gitignore
+# need to figure that out
     header = {
-      'Authorization': 'Bearer API-KEY'
-      
+      'Authorization': 'Bearer RAILS-APP-API-KEY'
+      'Content-Type': 'application/json'
+      'Accept': 'application/json'
     }
   
 # Create the HTTP objects
