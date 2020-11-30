@@ -1,0 +1,17 @@
+<h1>Editing story</h1>
+
+<%= render 'form' %>
+
+<%
+=begin%>
+ <%= link_to 'Show', [@story.newsletter, @story] %> |
+<%= link_to 'Back', newsletter_stories_path(@story.newsletter) %> 
+<%
+=end%>
+
+<%= link_to 'Show', @story %> 
+<%
+=begin%>
+ <%= link_to 'Back', stories_path %> 
+<%
+=end%>

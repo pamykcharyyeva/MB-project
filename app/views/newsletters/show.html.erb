@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Author:</strong>
+  <%= @newsletter.author %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @newsletter.date %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= sanitize @newsletter.html %>
+</p>
+
+<br>
+<%= button_to  "Publish", action: :publish%>
+
+<br>
+
+<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
+<%= link_to 'Back', newsletters_path %>
+
+
+
+
+<hr>
+<br>
+<br>
+<h2>Stories:</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Author</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @newsletter.stories.each do |story| %>
+  <tr>
+    <td><%= story.title %></td>
+    <td><%= sanitize story.html %></td>
+    <td><%= story.author %></td>
+    <td><%= link_to 'Show', [story] %></td>
+    <td><%= link_to 'Edit', edit_story_path(story) %></td>
+    <td><%= link_to 'Destroy', [story], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+</hr>

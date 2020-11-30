@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @story.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= sanitize @story.html %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @story.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_story_path %> 
+<%
+=begin%>
+ <%= link_to 'Back', stories_path %> 
+<%
+=end%>
