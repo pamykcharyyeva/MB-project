@@ -8,11 +8,11 @@ gem 'figaro'
 other gems:
 gem 'tinymce-rails'
 
-# Stories are nested within Newsletter by date
-# one can CRUD Stories 
-# one can CRUD Newsletters 
+#Stories are nested within Newsletter by date
+* one can CRUD Stories 
+* one can CRUD Newsletters 
 
-# to create stories and newsletters I used TinyMCE
+* to create stories and newsletters I used TinyMCE
 
 * bundle install
 
