@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   
   resources :newsletters
     resources :stories
+  
+post '/newsletters/:id/publish', to: 'newsletters#publish', as: 'publish'
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 root to: "api/newsletters#index"
 
 end

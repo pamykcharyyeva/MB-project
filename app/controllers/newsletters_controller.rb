@@ -2,7 +2,7 @@
 
 class NewslettersController < ApplicationController
  
-  before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
+  before_action :set_newsletter, only: [:show, :publish, :edit, :update, :destroy]
 
 
   # GET /newsletters
@@ -67,6 +67,7 @@ class NewslettersController < ApplicationController
 
   
   def publish
+    # byebug
     @newsletter.publish(newsletter_params)
     redirect_to @newsletter
   end
