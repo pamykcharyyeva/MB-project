@@ -1,6 +1,6 @@
 <h1>New Newsletter</h1>
 
-<%= render 'form', newsletter: @newsletter  %>
+<%= render 'form', locals: {newsletter: @newsletter}  %>
 
 
 <%= link_to 'Back', newsletters_path %>

@@ -2,7 +2,7 @@
 
 class NewslettersController < ApplicationController
  
-  before_action :set_newsletter, only: [:show, :publish, :edit, :update, :destroy]
+  before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
 
 
   # GET /newsletters
