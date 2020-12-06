@@ -1,6 +1,6 @@
 
 
-<%= form_with(model: @newsletter, url: publish_path, local: true) do |form| %>
+<%= form_with(model: @newsletter, local: true) do |form| %>
 
   <% if @newsletter.errors.any? %>
     <div id="error_explanation">

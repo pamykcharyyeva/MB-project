@@ -4,7 +4,7 @@ class CreateStories < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :html
       t.string :author
-      t.date :newsletter_date
+      t.datetime :newsletter_date
       # t.references :newsletter, null: false, foreign_key: true
       # t.references :newsletter, null: false, foreign_key: :newsletter_date 
 

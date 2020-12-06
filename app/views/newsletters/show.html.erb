@@ -18,6 +18,14 @@
 
 
 
+
+<%= form_tag(publish_path(@newsletter), method: 'POST', remote: true) do %>
+ <div class="actions">
+    <%= submit_tag ("Publish") %>
+    </div>
+<% end %>
+
+
 <%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
 <%= link_to 'Back', newsletters_path %>
 

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_053931) do
     t.string "title"
     t.string "html"
     t.string "author"
-    t.date "newsletter_date"
+    t.datetime "newsletter_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

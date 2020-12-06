@@ -61,6 +61,7 @@ class StoriesController < ApplicationController
     end
   end
 
+
   # DELETE /stories/1
   # DELETE /stories/1.json
   def destroy
@@ -70,6 +71,19 @@ class StoriesController < ApplicationController
       format.json { head :no_content }
   end
 end
+
+
+
+
+  # def publish_story
+  #   # byebug
+  #   @story.publish
+  #   redirect_to @story
+  # end
+
+
+
+
 
   private
    
