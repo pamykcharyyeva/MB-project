@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :stories
   
 post '/newsletters/:id/publish', to: 'newsletters#publish', as: 'publish'
-# post '/newsletters/stories/:id/publish_story', to: 'stories#publish_story', as: 'story'
+post '/stories/:id/publish_story', to: 'stories#publish_story', as: 'publish_story'
 # root to: "api/newsletters#index"
 
 end

@@ -14,7 +14,7 @@ class Newsletter < ApplicationRecord
         
 
           header = {
-            'Authorization': 'Bearer API-KEY',
+            'Authorization': 'Bearer API_KEY',
             'Content-Type': 'application/json'
           
           } 
@@ -26,7 +26,7 @@ class Newsletter < ApplicationRecord
           # to test
           Rails.logger.info(response_get)    
             Rails.logger.info(response_post)
-            byebug
+            # byebug
             
       end
 

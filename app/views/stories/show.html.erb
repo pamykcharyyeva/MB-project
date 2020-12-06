@@ -16,9 +16,8 @@
 </p>
 
 
-<%= link_to 'Edit', edit_story_path %> 
-<%
-=begin%>
- <%= link_to 'Back', stories_path %> 
-<%
-=end%>
+<%= form_tag(publish_story_path(@story), method: 'POST', remote: true) do %>
+ <div class="actions">
+    <%= submit_tag ("Publish") %>
+    </div>
+<% end %>

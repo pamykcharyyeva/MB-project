@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :set_story, only: [:show, :edit, :update, :destroy]
+  before_action :set_story, only: [:show, :publish_story, :edit, :update, :destroy]
 
   # GET /stories
   # GET /stories.json
@@ -75,11 +75,11 @@ end
 
 
 
-  # def publish_story
-  #   # byebug
-  #   @story.publish
-  #   redirect_to @story
-  # end
+  def publish_story
+    # byebug
+    @story.publish_story
+    redirect_to @story
+  end
 
 
 
