@@ -1,17 +1,21 @@
-<h1>Editing story</h1>
+<br>
+<br>
 
-<%= render 'form' %>
 
-<%
-=begin%>
- <%= link_to 'Show', [@story.newsletter, @story] %> |
-<%= link_to 'Back', newsletter_stories_path(@story.newsletter) %> 
-<%
-=end%>
+<main role="main" class="container">
 
-<%= link_to 'Show', @story %> 
-<%
-=begin%>
- <%= link_to 'Back', stories_path %> 
-<%
-=end%>
+    
+      <div class="jumbotron">
+ 
+          <div>
+            <h1>Editing story</h1>
+
+            <%= render 'form', story: @story %>
+
+            <%= link_to 'Show', @story %> |
+            <%= link_to 'Back', stories_path %>
+
+        </div>
+      </div>
+            
+</main>

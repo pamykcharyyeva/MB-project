@@ -1,63 +1,96 @@
-<p id="notice"><%= notice %></p>
 
-
-<p>
-  <strong>Author:</strong>
-  <%= @newsletter.author %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @newsletter.date %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= sanitize @newsletter.html %>
-</p>
-
-
-
-
-<%= form_tag(publish_path(@newsletter), method: 'POST', remote: true) do %>
- <div class="actions">
-    <%= submit_tag ("Publish") %>
-    </div>
-<% end %>
-
-
-<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
-<%= link_to 'Back', newsletters_path %>
-
-
-
-
-<hr>
 <br>
 <br>
-<h2>Stories:</h2>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Author</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<br>
+<main role="main" class="container">
 
-<% @newsletter.stories.each do |story| %>
-  <tr>
-    <td><%= story.title %></td>
-    <td><%= sanitize story.html %></td>
-    <td><%= story.author %></td>
-    <td><%= link_to 'Show', [story] %></td>
-    <td><%= link_to 'Edit', edit_story_path(story) %></td>
-    <td><%= link_to 'Destroy', [story], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    
+      <div class="jumbotron">
+        
+
+          <div>
+
+            <p id="notice"><%= notice %></p>
+            <p><b>Author:  </b><%= @newsletter.author %></p>
+            <p><b>Date:  </b><%= @newsletter.date %></p>
+            <p><b>Content:  </b><%= sanitize @newsletter.html %></p>
+           
+            
+          </div>
+          <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Edit', edit_newsletter_path(@newsletter) %></p>
+            <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Back', newsletters_path %> </p>
+            <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Destroy', @newsletter, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <br>
+            <br>
+             <%= form_tag(publish_path(@newsletter), method: 'POST', remote: true) do %>
+            <div class="btn btn-outline-success my-2 my-sm-0 actions" role="button" >
+                <%= submit_tag ("Publish") %>
+            </div>
+            <% end %> 
+
+          </div>
+
+
+          <div class="container">
+          
+          <div class="row">
+
+  
+
+        <% @newsletter.stories.each do |story| %>
+                <div class="col-md-4">
+                  <h3><%= story.title %></h3>
+                  <p><%= sanitize story.html %></p>
+                  <p><%= story.author %></p>
+                  <br>
+                
+                  <p class="p_btn-social">
+                    <a href="https://www.facebook.com" target="_blank"><img
+                        src="https://img.createsend1.com/ei/j/30/B40/C56/csimport/facebook_icon.png"
+                        style="display: inline;max-width:20px" width="20" alt="" /></a>&nbsp;&nbsp;
+                    <a href="https://www.twitter.com" target="_blank"><img
+                        src="https://img.createsend1.com/ei/j/30/B40/C56/csimport/twitter_icon.png"
+                        style="display: inline;max-width:20px" width="20" alt="" /></a>&nbsp;&nbsp;
+                    <a href="https://www.linkedin.com" target="_blank"><img
+                        src="https://img.createsend1.com/ei/j/30/B40/C56/csimport/linkedin_icon.png"
+                        style="display: inline;max-width:20px" width="20" alt="" /></a>&nbsp;&nbsp;
+                    <a href="mailto:?subject=Check%20out%20this%20story%20from%20Morning%20Brew!&amp;body=www.morningbrew.com%0A%0AWant%20more%20great%20content%3F%20Subscribe%20to%20Morning%20Brew%27s%20daily%20newsletter%20for%20all%20the%20latest%20news%20from%20Wall%20Street%20to%20Silicon%20Valley%20%40%20www.morningbrew.com."
+                      target="_blank"><img src="https://img.createsend1.com/ei/j/30/B40/C56/csimport/mail_icon.png"
+                        style="display: inline;max-width:20px" width="20" alt="" /></a>
+                  </p>
+                  <br>
+                  <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Show', [story] %></p>
+                  <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Edit', edit_story_path(story) %></p>
+                  <p class="btn btn-outline-success my-2 my-sm-0" href="#" role="button"><%= link_to 'Destroy', [story], method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                
+                  
+                </div>
+           <% end %>
+           
+          </div>
+
+          <hr>
+
+        </div>
+           
+
+</main>
 
 
 
-</hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

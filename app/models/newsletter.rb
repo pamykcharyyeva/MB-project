@@ -14,7 +14,7 @@ class Newsletter < ApplicationRecord
         
 
           header = {
-            'Authorization': 'Bearer API_KEY',
+            'Authorization': 'Bearer API-KEY',
             'Content-Type': 'application/json'
           
           } 

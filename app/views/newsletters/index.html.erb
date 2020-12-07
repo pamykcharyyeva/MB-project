@@ -1,31 +1,43 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Newsletters</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Author</th>
-      <th>Date</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @newsletters.each do |newsletter| %>
-      <tr>
-        <td><%= newsletter.author %></td>
-        <td><%= newsletter.date %></td>
-        <td><%= sanitize newsletter.html %></td>
-        <td><%= link_to 'Show', newsletter %></td>
-        <td><%= link_to 'Edit', edit_newsletter_path(newsletter) %></td>
-        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<br>
 <br>
 
-<%= link_to 'New Newsletter', new_newsletter_path %>
+<div>
+<p class="btn btn-outline-success my-2 my-sm-0" role="button" ><%= link_to 'Create New Newsletter', new_newsletter_path %></p>
+</div>
+
+
+<p id="notice"><%= notice %></p>
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>Newsletters</h1>
+<hr>
+  <div>
+    <% @newsletters.each do |newsletter| %>
+      <p><b>Author:  </b><%= newsletter.author %></p>
+      <p><b>Date:  </b><%= newsletter.date %></p>
+      <p><b>Content:  </b><%= sanitize newsletter.html %></p>
+      <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Show', newsletter %></p>
+      <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Edit', edit_newsletter_path(newsletter) %></p>
+      <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+       
+   <hr>
+    <% end %>
+  </div>
+
+
+  </div>
+  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</main>
+<br>
+<br>
+<br>
+
+
+
+
+

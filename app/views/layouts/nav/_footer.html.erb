@@ -1,19 +1,6 @@
-<br>
-<br>
-<br>
-<main role="main" class="container">
-
-    
-      <div class="jumbotron">
-    
-
-          <div>
-
-            <p id="notice"><%= notice %></p>
-            <p><b>Title:  </b><%= @story.title %></p>
-            <p><b>Content:  </b><%= sanitize @story.html %></p>
-            <p><b>Author:  </b><%= @story.author %></p>
-            <br>
+<footer class="container-expand-md fixed-bottom p-1  bg-info">
+  <p>© Company 2017-2020</p>
+  <br>
                 
                   <p class="p_btn-social">
                     <a href="https://www.facebook.com" target="_blank"><img
@@ -30,30 +17,5 @@
                         style="display: inline;max-width:20px" width="20" alt="" /></a>
                   </p>
                   <br>
-          </div>
-          <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Edit', edit_story_path(@story) %></p>
-            <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Back', stories_path %> </p>
-            <p class="btn btn-outline-success my-2 my-sm-0" role="button"><%= link_to 'Destroy', @story, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            <br>
-            <br>
-            <%= form_tag(publish_story_path(@story), method: 'POST', remote: true) do %>
-              <div class="actions">
-                  <%= submit_tag ("Publish") %>
-                  </div>
-              <% end %>
-          </div>
-            <br>
-            <br>
-            
-</main>
-<br>
-<br>
-<br>
-
-
-
-
-
-
-
+</footer>
 
